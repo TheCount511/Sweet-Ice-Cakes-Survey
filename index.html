@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>sweet Cakes Survey</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id='container'>
+        <header>
+            <h1 id='title'>Sweet Ice cakes survey form</h1>
+            <p id='description'>Thank you for taking your time to help us improve our products</p>
+        </header>
+        <form id='survey-form' action='submit'>
+            <div class='form-group'>
+                <label id="name-label">Name</label>
+                <input name="name" id="name" placeholder="Enter Your name" type="text" required>
+            </div>
+            <div class='form-group'>
+                <label id="email-label">Email</label>
+                <input name="email" id="email" placeholder="E-mail address" type="email" required>
+            </div>
+            <div class='form-group'>
+                <label id="number-label">Age</label>
+                <input name="age" placeholder="Age" id="number" type="number" min="1" max="100">
+            </div>
+            <div class='form-group'>
+                <label>Which of our products do you like best?</label>
+                <div class="custom-select">
+                    <select id="dropdown">
+                        <option value="0">Select best product:</option>
+                        <option value="1">Chocolate Cake</option>
+                        <option value="2">Cheese Cake</option>
+                        <option value="3">Fruit Cake</option>
+                        <option value="4">Chocolate mud cupcakes</option>
+                    </select>
+                </div>
+            </div>
+            <div class='form-group'>
+                <div class="checkbox-radio-caption">
+                <label>What would you like to see improved? (Check all that apply)</label>
+                </div>
+                <label class="check-radio-container">Chocolate cake
+                    <input type="checkbox" checked="checked" value="Chocolate cake">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="check-radio-container">Cheese Cake
+                    <input type="checkbox" checked="checked" value="Cheese Cake">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="check-radio-container">Fruit Cake
+                    <input type="checkbox" checked="checked" value="Fruit Cake">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="check-radio-container">Chocolate mud cupcakes
+                    <input type="checkbox" checked="checked" value="Chocolate mud cupcakes">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="form-group">
+                          <div class="checkbox-radio-caption">
+                          <label>How likely are you to recommend us ?</label>
+                          </div>
+                <label class="check-radio-container">Very likely
+                    <input type="radio" checked="checked" name="recommendation" value="5">
+                    <span class="radio-button"></span>
+                </label>
+                <label class="check-radio-container">Somewhat likely
+                    <input type="radio" name="recommendation" value="4">
+                    <span class="radio-button"></span>
+                </label>
+                <label class="check-radio-container">Neutral
+                    <input type="radio" name="recommendation" value="3">
+                    <span class="radio-button"></span>
+                </label>
+                <label class="check-radio-container">Somewhat unlikely
+                    <input type="radio" name="recommendation" value="2">
+                    <span class="radio-button"></span>
+                </label>
+                <label class="check-radio-container">Very unlikely
+                    <input type="radio" name="recommendation" value="1">
+                    <span class="radio-button"></span>
+                </label>
+            </div>
+            <div class="form-group">
+                <p class="textarea-caption">Any comments or suggestions?</p>
+                <textarea
+                >
+
+              </textarea>
+            </div>
+            <div class="form-group">
+                <button class="submit" id="submit" name="submit" type="submit" value="Register">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

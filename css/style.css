@@ -1,0 +1,247 @@
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: linear-gradient(115deg, rgba(106, 16, 81, 0.8), rgba(106, 16, 81, 0.7)), url(https://www.goodfreephotos.com/albums/food/strawberries-on-a-chocolate-cake.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#container {
+    display: block;
+    margin: auto;
+    color: #484c7f;
+}
+
+#title {
+    font-size: 4em;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    color: #fff;
+    margin-bottom:5px; 
+
+}
+
+
+/*    font-family: 'Unna', serif;
+    font-family: 'Nunito', sans-serif;*/
+#description {
+  margin-top: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#survey-form {
+    margin: auto;
+    max-width: 750px;
+    background-color: rgba(241, 212, 212, 0.81);
+    padding: 40px;
+}
+
+#survey-form label, input {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+.form-group {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-group input {
+    margin-top: 5px;
+    width: 96%;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 2%;
+    padding-right: 2%
+}
+
+
+.form-group textarea {
+    margin-top: 0px;
+    padding-left: 1%;
+    padding-right: 1%;
+    height: 90px;
+    width: 97.5%;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.form-group button {
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 40px;
+        font-size: 1.3em;
+    width: 100%;
+    font-family: 'Noto Sans', sans-serif;
+    border: 0px solid #ccc;
+    color:#f1d4d4;
+    background-color: rgba(72, 76, 127);
+
+}
+
+.textarea-caption,
+.checkbox-radio-caption {
+    margin-bottom: 5px;
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+/* Customize the label (the container) */
+.check-radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 0.9em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check-radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* Create a custom radio button */
+.radio-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.check-radio-container:hover input~.checkmark,
+input:checked~.radio-button {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check-radio-container input:checked~.checkmark,
+input:checked~.radio-button {
+    background-color: rgba(106, 16, 81);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after,
+.radio-button:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.check-radio-container input:checked~.checkmark:after,
+input:checked~.radio-button:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.check-radio-container .checkmark:after,
+.radio-button:after {
+    left: 7px;
+    top: 5px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    width: 100%
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element: */
+    width: 100%
+}
+
+.select-selected {
+    background-color: #fff;
+
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+      font-size: 0.9em;
+    font-family: 'Noto Sans', sans-serif;
+    color: #484c7f;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
